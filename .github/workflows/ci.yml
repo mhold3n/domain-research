@@ -7,7 +7,7 @@ on:
 
 jobs:
   package-ci:
-    uses: mhold3n/server/.github/workflows/reusable-python-package-ci.yml@81f9fc1d588f10c9e8e88cad33e9e7904b0a696b
+    uses: mhold3n/server/.github/workflows/reusable-python-package-ci.yml@77eea34329f1d292afbfe031dbe3877837c16305
     secrets: inherit
     with:
       python-version: "3.11"
