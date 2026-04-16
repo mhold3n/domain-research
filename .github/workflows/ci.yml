@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  package-ci:
+    uses: mhold3n/server/.github/workflows/reusable-python-package-ci.yml@81f9fc1d588f10c9e8e88cad33e9e7904b0a696b
+    secrets: inherit
+    with:
+      python-version: "3.11"
+      extras-name: dev
+      mypy-target: src
+      mypy-extra-args: "--strict"
+      ruff-paths: .
+      pytest-args: pytest -q
+      run-mypy: false
